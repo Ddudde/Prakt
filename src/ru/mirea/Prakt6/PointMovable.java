@@ -1,4 +1,4 @@
-package ru.mirea.Prakt5;
+package ru.mirea.Prakt6;
 
 public class PointMovable extends Point implements Movable {
 

@@ -1,12 +1,12 @@
-package ru.mirea.Prakt5;
+package ru.mirea.Prakt6;
 
-public class Circle {
+public class Rectangle {
     private Point center;
-    private double radius;
+    private double diag;
 
-    public Circle(Point center, double radius) {
+    public Rectangle(Point center, double diag) {
         this.center = center;
-        this.radius = radius;
+        this.diag = diag;
     }
 
     public Point getCenter() {
@@ -17,15 +17,15 @@ public class Circle {
         this.center = center;
     }
 
-    public double getRadius() {
-        return radius;
+    public double getDiag() {
+        return diag;
     }
 
     @Override
     public String toString() {
-        return "Circle{" +
+        return "Rectangle{" +
                 "center=" + center +
-                ", radius=" + radius +
+                ", diag=" + diag +
                 '}';
     }
 }
