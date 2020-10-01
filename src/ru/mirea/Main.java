@@ -1,9 +1,11 @@
 package ru.mirea;
 
+import ru.mirea.Prakt8.exercise1.FurnitureShop;
+
 public class Main {
 
     public static void main(String[] args) {
-        ru.mirea.Prakt7.Main maen = new ru.mirea.Prakt7.Main();
+        FurnitureShop maen = new FurnitureShop();
         maen.main();
     }
 }
