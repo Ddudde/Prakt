@@ -1,9 +1,6 @@
-package ru.mirea.exercise7;
+package ru.mirea.Prakt7;
 
 public class Pan  extends  Dish{
-    int radius;
-    int deep;
-    double volume;
 
     public Pan(int radius, int deep) {
         this.radius = radius;
