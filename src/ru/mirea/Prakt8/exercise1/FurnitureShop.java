@@ -18,9 +18,12 @@ public class FurnitureShop {
         init_katalog();
         System.out.println("Хочется представить к вашему вниманию каталог наших товаров: ");
         print_katalog();
-        System.out.println("Какой номер вас заинтересовал?");
-        num = in.nextInt();
-        buy();
+        while (!catalog.isEmpty() && avaibleWallet()) {
+            System.out.println("Какой номер вас заинтересовал?");
+            num = in.nextInt();
+            buy();
+        }
+        System.out.println("Ваших у.е. в кошельке недостаточно, для покупки наших товаров.");
     }
 
     public void buy()
@@ -37,7 +40,7 @@ public class FurnitureShop {
             print_wallet();
             return;
         }
-        catalog.remove(num-1);
+        catalog.remove(getNumFurniture(num));
         wallet -= fur.cost;
         System.out.println("Поздравляю, вы успешно приобрели товар.");
         print_wallet();
@@ -59,6 +62,15 @@ public class FurnitureShop {
         return null;
     }
 
+    public int getNumFurniture(int j)
+    {
+        for(int i = 0; i < catalog.size(); i++)
+        {
+            if (catalog.get(i).num == j) return i;
+        }
+        return 0;
+    }
+
     public void init_katalog()
     {
         init_chairs();
@@ -72,6 +84,16 @@ public class FurnitureShop {
         {
             System.out.println("№: " + sd.num + ", Furniture: " + sd.type + ", color: " + sd.color + ", cost: " + sd.cost + ", width: " + sd.width + ", height: " + sd.height + ", mass: " + sd.mass);
         }
+    }
+
+    public boolean avaibleWallet()
+    {
+        for(Furniture sd : catalog)
+        {
+            if(wallet >= sd.cost)
+                return true;
+        }
+        return false;
     }
 
     public void init_chairs()
