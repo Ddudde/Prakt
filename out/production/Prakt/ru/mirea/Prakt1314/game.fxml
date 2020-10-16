@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mirea.Prakt1314.GameController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -61,50 +63,65 @@
       <items>
         <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0">
           <children>
-                  <GridPane layoutX="150.0" layoutY="87.0">
+                  <GridPane alignment="TOP_CENTER" hgap="10.0" layoutX="150.0" layoutY="87.0" vgap="10.0">
                     <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="50.0" percentWidth="0.0" prefWidth="50.0" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="50.0" prefWidth="50.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="50.0" prefWidth="50.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="50.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="50.0" percentWidth="0.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="50.0" percentWidth="0.0" prefWidth="50.0" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="50.0" percentHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="50.0" percentHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="50.0" percentHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="50.0" percentHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
                      <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@krest.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <image>
-                              <Image url="@krest.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                           <image>
-                              <Image url="@krest.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                           <image>
-                              <Image url="@nolik.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                           <image>
-                              <Image url="@nolik.png" />
-                           </image>
-                        </ImageView>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" onAction="#b"/>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="1" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="2" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="3" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.rowIndex="1" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.rowIndex="2" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.rowIndex="3" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
+                  <Line endX="120.0" endY="-118.0" layoutX="275.0" layoutY="330.0" startX="-120.0" startY="-118.0" strokeWidth="10.0" />
+                  <Line endX="120.0" endY="-247.0" layoutX="275.0" layoutY="399.0" startX="-120.0" startY="-247.0" strokeWidth="10.0" />
+                  <Line endX="120.0" endY="-240.0" layoutX="275.0" layoutY="332.0" startX="-120.0" startY="-240.0" strokeWidth="10.0" />
+                  <Line endX="120.0" endY="-110.0" layoutX="275.0" layoutY="382.0" startX="-120.0" startY="-110.0" strokeWidth="10.0" />
+                  <Line endX="120.0" layoutX="275.0" layoutY="332.0" startX="-120.0" strokeWidth="10.0" />
+                  <Line endX="-316.0" endY="-96.0" layoutX="471.0" layoutY="423.0" startX="-316.0" startY="-327.0" strokeWidth="10.0" />
+                  <Line endX="-602.0" endY="-113.0" layoutX="817.0" layoutY="440.0" startX="-602.0" startY="-343.0" strokeWidth="10.0" />
+                  <Line endX="-549.0" endY="-142.0" layoutX="824.0" layoutY="469.0" startX="-549.0" startY="-377.0" strokeWidth="10.0" />
+                  <Line endX="-581.0" endY="-131.0" layoutX="916.0" layoutY="458.0" startX="-581.0" startY="-361.0" strokeWidth="10.0" />
+                  <Line endX="-391.0" endY="-119.0" layoutX="786.0" layoutY="446.0" startX="-391.0" startY="-349.0" strokeWidth="10.0" />
           </children>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
         </AnchorPane>
       <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
         <children>
-          <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Крестиков: 3" textAlignment="CENTER" wrapText="false">
+          <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Крестиков: " textAlignment="CENTER" wrapText="false">
                      <font>
                 <Font size="18.0" fx:id="x1" />
                      </font>
@@ -112,7 +129,7 @@
                 <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
                      </textFill>
                   </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="65.0" style="&#10;" text="Ноликов: 2" textAlignment="CENTER" wrapText="false">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="65.0" style="&#10;" text="Ноликов:  " textAlignment="CENTER" wrapText="false">
                      <font>
                         <Font size="18.0" fx:id="x3" />
                      </font>

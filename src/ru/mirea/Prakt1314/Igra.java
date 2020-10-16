@@ -29,7 +29,6 @@ public class Igra extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Игра");
-        primaryStage.setHeight(280);
 
         primaryStage.show();
     }
