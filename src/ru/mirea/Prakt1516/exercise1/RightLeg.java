@@ -3,21 +3,17 @@ package ru.mirea.Prakt1516.exercise1;
 
 public class RightLeg implements Runnable {
 
-    Common res;
+    private final Controller res;
 
-    public RightLeg(Common res) {
+    public RightLeg(Controller res) {
         this.res = res;
     }
 
     @Override
     public void run() {
-        synchronized (this) {
+        synchronized (res) {
             while (true) {
-                try {
-                    this.wait(1000L);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                System.out.println("Right");
                 res.print();
             }
         }
