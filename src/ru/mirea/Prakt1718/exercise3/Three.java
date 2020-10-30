@@ -6,12 +6,16 @@ import java.util.regex.Pattern;
 public class Three {
     public static void main(String[] args) {
         System.out.println("Список цен:");
-        String inp = "1000.10 USD\nWindows";
-        System.out.println(inp);
+        String[] inp = new String[]{"23.78 USD", "22 UDD", "0.002 USD", "139.90 RUR", "99.90 RUR"};
+        for (String f : inp)
+            System.out.println(f);
         System.out.println();
-        Pattern pattern = Pattern.compile("^[0-9]*.[0-9]{2} (USD|RUR|EU)$",Pattern.MULTILINE);
-        Matcher matcher = pattern.matcher(inp);
-        System.out.println("Список верифицированных цен:");
-        System.out.println(matcher.find() ? matcher.group() : "Не найдено ценников");
+        Pattern pattern = Pattern.compile("^[0-9]*.[0-9]{2} (USD|RUR|EU)$", Pattern.MULTILINE);
+        Matcher matcher = pattern.matcher("");
+        System.out.println("Верифицированный список цен:");
+        for (String f : inp) {
+            matcher.reset(f);
+            System.out.println(matcher.find() ? matcher.group() : "Цена неверна");
+        }
     }
 }
