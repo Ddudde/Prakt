@@ -1,10 +1,13 @@
 package ru.mirea;
 
-import ru.mirea.Prakt1920.Generator;
+import ru.mirea.Prakt2122.exercise1.Complex;
+import ru.mirea.Prakt2122.exercise1.Holding;
 
 public class Main {
 
     public static void main(String[] args) {
-        new Generator();
+        Holding hold = new Holding();
+        Complex comp = hold.getRandomComplex();
+        comp.start();
     }
 }
