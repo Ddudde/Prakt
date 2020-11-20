@@ -1,13 +1,10 @@
 package ru.mirea;
 
-import ru.mirea.Prakt2122.exercise1.Complex;
-import ru.mirea.Prakt2122.exercise1.Holding;
+import ru.mirea.Prakt2122.exercise3.Redaktor;
 
 public class Main {
 
     public static void main(String[] args) {
-        Holding hold = new Holding();
-        Complex comp = hold.getRandomComplex();
-        comp.start();
+        Redaktor redaktor = new Redaktor();
     }
 }
