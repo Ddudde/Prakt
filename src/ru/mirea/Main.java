@@ -1,10 +1,10 @@
 package ru.mirea;
 
-import ru.mirea.Prakt2122.exercise3.Redaktor;
+import ru.mirea.Prakt2324.exercise1.Riid;
 
 public class Main {
 
     public static void main(String[] args) {
-        Redaktor redaktor = new Redaktor();
+        new Riid();
     }
 }
