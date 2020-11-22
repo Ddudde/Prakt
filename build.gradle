@@ -11,4 +11,5 @@ repositories {
 
 dependencies {
     compile 'com.opencsv:opencsv:5.2'
+    compile 'org.jsoup:jsoup:1.13.1'
 }
