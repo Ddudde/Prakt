@@ -1,6 +1,6 @@
 package ru.mirea;
 
-import ru.mirea.Prakt2324.exercise2.Parser;
+import ru.mirea.Prakt2526.Parser;
 
 public class Main {
 
